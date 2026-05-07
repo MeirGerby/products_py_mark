@@ -1,0 +1,8 @@
+[tool.uv.workspace]
+members = [
+    "shared",
+    "services/api_gateway",
+    "services/product_service",
+    "services/user_service",
+    "apps/streamlit"
+]

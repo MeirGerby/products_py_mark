@@ -1,0 +1,25 @@
+services:
+
+  gateway:
+    build:
+      context: .
+      dockerfile: services/api_gateway/Dockerfile
+    ports:
+      - "8000:8000"
+
+  product_service:
+    build:
+      context: .
+      dockerfile: services/product_service/Dockerfile
+
+  user_service:
+    build:
+      context: .
+      dockerfile: services/user_service/Dockerfile
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: apps/streamlit/Dockerfile
+    ports:
+      - "8501:8501"
